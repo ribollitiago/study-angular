@@ -1,0 +1,28 @@
+<main>
+    <section class="form-section">
+        <div class="logo-container">
+            <img src="svg/logo.svg" />
+            <h2>MoveIt!</h2>
+        </div>
+        <h2>{{ title }}</h2>
+        <ng-content></ng-content>
+        <div class="btn-wrapper">
+            <button class="btn-primary"
+            (click)="submit()"
+            [disabled]="disablePrimaryBtn"
+            >
+            {{ primaryBtnText }}
+          </button> <!-- no (click) do botão, ele executa a função submit() -->
+            <div class="divider">
+                <div></div>
+                <span>or</span>
+                <div></div>
+            </div>
+            <button class="btn-secondary" (click)="navigate()">{{ secondaryBtnText }}</button>  <!-- no (click) do botão, ele executa a função de troca de tela, navigate() -->
+        </div>
+    </section>
+    <section class="main-section">
+        <h1> You Should, MoveIt!</h1>
+        <img src="svg/main-illustration.svg" />
+    </section>
+</main>
